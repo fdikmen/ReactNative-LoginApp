@@ -5,20 +5,19 @@ import LoginForm from './LoginForm'
 export default class Login extends Component {
     render() {
         return (
-            <View>
-                <KeyboardAvoidingView behavior={"position"}>
                 <View style={styles.headBackground}>
                     <View>
                         <Text style={styles.logo}> Login </Text>
                         <Text style={styles.logoText}> Slogan </Text>
                     </View>
                     <ScrollView styles={{marginTop:150}}>
+                <KeyboardAvoidingView behavior={"position"}>
                         <View style={styles.loginArea}>
                             <Text style={styles.loginAreaTitle}>Test APP Login</Text>
                             <Text style={styles.loginAreaDescription}>Please login to use the application...</Text>                         
-                        
                             <LoginForm/>
                         </View>
+                </KeyboardAvoidingView>
                     </ScrollView>
                     <View style={styles.signUpArea}>
                         <Text style={styles.signUpAreaDesc}>Dont have an account?</Text>
@@ -27,8 +26,6 @@ export default class Login extends Component {
                         </TouchableOpacity>
                     </View>
                 </View>
-                </KeyboardAvoidingView>
-            </View>
         )
     }
 }
@@ -39,7 +36,7 @@ const styles = StyleSheet.create({
         position:'absolute',
         top:0,
         left:0,
-       
+       flex:1,
         width:'100%',
         backgroundColor:'#1572DE',
         borderBottomRightRadius:200,
@@ -58,7 +55,7 @@ const styles = StyleSheet.create({
         color:'#F2F2F2'
     },
     loginArea:{
-        margin:40,
+        margin:50,
         backgroundColor:'#FFF',
         padding: 20,
         borderRadius:5,
@@ -75,7 +72,7 @@ const styles = StyleSheet.create({
         textAlign:'center',
         marginVertical:10
     },
-    signUpArea:{alignItems:'center'},
+    signUpArea:{alignItems:'center',marginBottom:20},
     signUpAreaDesc:{color:'#999'},
     signUpAreaText:{color:'#666'}
 })

@@ -6,7 +6,7 @@ import Login from './src/pages/Login'
 export default class App extends Component {
   render() {
     return (
-      <View style={styles.}>
+      <View style={styles.container}>
         <Login/>
       </View>
     )
